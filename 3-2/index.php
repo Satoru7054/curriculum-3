@@ -9,25 +9,10 @@
     }    
 
 // step3
+    $i = 0;
     foreach ($price as $key => $value) {
-        switch ($key) {
-            case "りんご":
-                echo "$key"."は".Ikura($value, $num[0])."円です。";
-                echo "<br>";
-            break;
-            
-            case "みかん":
-                echo "$key"."は".Ikura($value, $num[1])."円です。";
-                echo "<br>";
-            break;
-
-            case "もも":
-                echo "$key"."は".Ikura($value, $num[2])."円です。";
-                echo "<br>";
-            break;
-            
-            default:
-                echo "switchに新たなcaseを追加してください。";
-        }
+        echo "$key"."は".Ikura($value, $num[$i])."円です。";
+        echo "<br>";
+        $i++;
     }
 ?>
