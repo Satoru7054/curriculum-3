@@ -31,7 +31,7 @@
         break;
 
         case "9":
-            echo "凶";
+            echo "大吉";
         break;
     }
 ?>
