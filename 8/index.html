@@ -18,10 +18,10 @@
 </head>
 <body>
     <select id="language" onchange="changeLang()">
-        <option id="select" value="0">選択してください</option>
-        <option id="selected_jpn" value="1">日本語</option>
-        <option id="selected_en" value="2">English</option>
-        <option id="selected_all" value="3">全て表示</option>
+        <option id="select" >選択してください</option>
+        <option id="selected_jpn" value="jp">日本語</option>
+        <option id="selected_en" value="en">English</option>
+        <option id="selected_all" value="both">全て表示</option>
     </select>
     <table>
         <tr>
@@ -44,20 +44,19 @@
             let japanese = document.getElementsByClassName("japanese");
             let english = document.getElementsByClassName("english");
             let selected = document.getElementById("language").value;
-            console.log(selected);
-            if (selected == 1) {
+            if (selected == "jp") {
                 for (i=0; i<4; i++) {
                     japanese[i].style.display = "";
                     english[i].style.display = "none";
                 }
             }
-            if (selected == 2) {
+            if (selected == "en") {
                 for (i=0; i<4; i++) {
                     japanese[i].style.display = "none";
                     english[i].style.display = "";
                 }
             }
-            if (selected == 3) {
+            if (selected == "both") {
                 for (i=0; i<4; i++) {
                     japanese[i].style.display = "";
                     english[i].style.display = "";
